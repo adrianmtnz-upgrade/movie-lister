@@ -1,4 +1,4 @@
-package com.movie_lister;
+package com.movie_lister._00_main;
 
 /**
  * Hello world!
