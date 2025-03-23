@@ -1,8 +1,8 @@
-target
+.vscode/
+target/
 *.log
 .DS_Store
 Thumbs.db
-.vscode
 *.jar
 *.war
 *.nar
