@@ -10,6 +10,9 @@ import com.movie_lister._04_exceptions.*;
 public class FileDataAccess implements DataAccessible {
     private final String resourceRelPath = "src/main/resources/movies.txt";
     
+    public String getResourceRelPath(){
+        return this.resourceRelPath;
+    }
 
     @Override
     public boolean checkFileExistance() {
