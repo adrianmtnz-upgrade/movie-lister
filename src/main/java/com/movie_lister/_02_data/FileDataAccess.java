@@ -49,7 +49,7 @@ public class FileDataAccess implements DataAccessible {
         File file = new File(resourceRelPath);
         try {
             PrintWriter out = new PrintWriter(new FileWriter(file, append));
-            out.println(movie.toString());
+            out.println(movie.getTitle());
             out.close();
         } catch (IOException exception) {
             DataWriterException ex = new DataWriterException("Exception, couldn't add the movie to file");

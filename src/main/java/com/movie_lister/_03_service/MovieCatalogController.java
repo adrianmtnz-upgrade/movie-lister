@@ -43,15 +43,30 @@ public class MovieCatalogController implements Controllable {
     }
 
     @Override
-    public void addMovie(String title) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addMovie'");
+    public void addMovie(String title) throws DataAccessException {
+        
+        Movie movie = new Movie(title);
+        boolean append;
+        
+        try {
+            append = data.checkFileExistance();
+            data.writeMovie(movie, data.getResourceRelPath(), append);
+        } catch (IOException exception) {
+            DataAccessException ex = new DataAccessException("Data access exception");
+            ex.throwDataAccessException(); 
+        }
     }
 
     @Override
     public void deleteMovie(String title) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteMovie'");
+        
+        Movie movie = new Movie(title);
+
+        try {
+            
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
     @Override
